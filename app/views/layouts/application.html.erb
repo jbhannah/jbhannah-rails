@@ -9,6 +9,13 @@
 <body>
 <div id="page">
 
+<header>
+<hgroup id="site_title">
+<h1><%= link_to Settings.name, root_path %></h1>
+<h2><%= Settings.handle %></h2>
+</hgroup>
+</header>
+
 <%= yield %>
 
 </div>
