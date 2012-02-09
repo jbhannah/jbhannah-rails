@@ -15,3 +15,7 @@
 body {
   @include blueprint;
 }
+
+div#page {
+  @include container;
+}
