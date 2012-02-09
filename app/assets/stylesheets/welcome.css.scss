@@ -1,3 +1,15 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "blueprint";
+
+body {
+  div#page {
+    header#header, div#content {
+      @include column(18, true);
+      @include prepend(3);
+      @include append(3);
+    }
+  }
+}
