@@ -1,0 +1,24 @@
+social:
+  fb:
+    name: "Facebook"
+    handle: "jbhannah"
+    url: "https://www.facebook.com/jbhannah"
+  twitter:
+    name: "Twitter"
+    handle: "@jbhannah"
+    url: "https://twitter.com/jbhannah"
+  linkedin:
+    name: "LinkedIn"
+    handle: "jbhannah"
+    url: "https://www.linkedin.com/in/jbhannah"
+  flickr:
+    name: "Flickr"
+    handle: "jbhannah"
+    url: "http://www.flickr.com/photos/jbhannah"
+  gh:
+    name: "GitHub"
+    handle: "jbhannah"
+    url: "https://github.com/jbhannah"
+  gplus:
+    name: "Google+"
+    url: "https://plus.google.com/115963221291991585027"
