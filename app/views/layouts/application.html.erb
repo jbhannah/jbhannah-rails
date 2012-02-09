@@ -9,7 +9,7 @@
 <body>
 <div id="page">
 
-<header>
+<header id="header">
   <hgroup id="site_title">
     <h1><%= link_to Settings.name, root_path %></h1>
     <h2><%= Settings.handle %></h2>
@@ -26,7 +26,9 @@
   </nav>
 </header>
 
-<%= yield %>
+<div id="content">
+  <%= yield %>
+</div>
 
 </div>
 </body>
