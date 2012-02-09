@@ -2,7 +2,7 @@
 <html>
 <head>
   <title><%= Settings.name %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -15,7 +15,15 @@
     <h2><%= Settings.handle %></h2>
   </hgroup>
 
-  <%= image_tag "avatar.png", :id => "avatar", :alt => Settings.name %>
+  <%= image_tag "avatar.png", id: "avatar", alt: Settings.name %>
+
+  <nav id="social_menu">
+    <ul>
+      <% Settings.social.each do |k, v| %>
+        <li id="<%= k %>"><%= link_to image_tag("social/#{k}.png", class: "social_icon", alt: v["name"]), v["url"] %></li>
+      <% end %>
+    </ul>
+  </nav>
 </header>
 
 <%= yield %>
