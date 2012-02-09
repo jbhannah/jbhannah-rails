@@ -14,8 +14,16 @@
 
 body {
   @include blueprint;
-}
 
-div#page {
-  @include container;
+  div#page {
+    @include container;
+
+    header#header {
+      @include column(24, true);
+    }
+
+    div#content {
+      @include column(24, true);
+    }
+  }
 }
