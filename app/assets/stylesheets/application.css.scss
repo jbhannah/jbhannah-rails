@@ -42,13 +42,21 @@ body {
         @include append(18);
 
         clear: both;
-        padding-top: 3px;
+        padding-top: 4px;
 
         ul {
           @include horizontal-list;
 
           li {
-            padding: 0 3px !important;
+            padding: 0 3px;
+
+            &:first-child {
+              padding-left: 4px;
+            }
+
+            &:last-child {
+              padding-right: 4px;
+            }
           }
         }
       }
