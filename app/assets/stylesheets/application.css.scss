@@ -23,34 +23,34 @@ body {
     padding-top: 1em;
 
     div#main {
-      @include column(18, true);
-      @include prepend(6);
+      @include column(20, true);
+      @include prepend(4);
 
       header#header {
-        @include column(18, true);
+        @include column(20, true);
 
         hgroup#site_title {
-          @include column(18, true);
+          @include column(20, true);
 
           text-align: right;
         }
       }
 
       div#content {
-        @include column(18, true);
+        @include column(20, true);
       }
     }
 
     div#sidebar {
-      @include column(6);
+      @include column(4);
       @include pull(24, true);
 
       img#avatar {
-        @include column(6);
+        @include column(4);
       }
 
       nav#social_menu {
-        @include column(6);
+        @include column(4);
 
         clear: both;
         padding-top: 4px;
@@ -59,14 +59,18 @@ body {
           @include horizontal-list;
 
           li {
-            padding: 0 3px;
+            padding: 0 2px;
 
             &:first-child {
-              padding-left: 4px;
+              padding-left: 5px;
             }
 
             &:last-child {
-              padding-right: 4px;
+              padding-right: 5px;
+            }
+
+            img.social_icon {
+              width: span(1) * 2 / 3;
             }
           }
         }
