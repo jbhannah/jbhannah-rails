@@ -20,6 +20,8 @@ body {
   div#page {
     @include container;
 
+    padding-top: 1em;
+
     div#main {
       @include column(18, true);
       @include prepend(6);
@@ -41,7 +43,7 @@ body {
 
     div#sidebar {
       @include column(6);
-      @include pull(24, last);
+      @include pull(24, true);
 
       img#avatar {
         @include column(6);
