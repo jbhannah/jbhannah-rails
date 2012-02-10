@@ -16,7 +16,9 @@
     <h1><%= link_to Settings.name, root_path %></h1>
     <h2><%= Settings.handle %></h2>
   </hgroup>
+</header>
 
+<div id="sidebar">
   <%= image_tag "avatar.png", id: "avatar", alt: Settings.name %>
 
   <nav id="social_menu">
@@ -26,7 +28,9 @@
       <% end %>
     </ul>
   </nav>
-</header>
+
+  <%= yield(:sidebar) %>
+</div>
 
 <div id="content">
   <%= yield %>
