@@ -2,8 +2,8 @@
 <html>
 <head>
   <title><%= Settings.name %></title>
-  <%= stylesheet_link_tag    "application",       media: "all" %>
-  <%= stylesheet_link_tag    params[:controller], media: "all" %>
+  <%= stylesheet_link_tag "application",       media: "all" %>
+  <%= stylesheet_link_tag params[:controller], media: "all" %>
 
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -11,12 +11,18 @@
 <body>
 <div id="page">
 
-<header id="header">
-  <hgroup id="site_title">
-    <h1><%= link_to Settings.name, root_path %></h1>
-    <h2><%= Settings.handle %></h2>
-  </hgroup>
-</header>
+<div id="main">
+  <header id="header">
+    <hgroup id="site_title">
+      <h1><%= link_to Settings.name, root_path %></h1>
+      <h2><%= Settings.handle %></h2>
+    </hgroup>
+  </header>
+
+  <div id="content">
+    <%= yield %>
+  </div>
+</div>
 
 <div id="sidebar">
   <%= image_tag "avatar.png", id: "avatar", alt: Settings.name %>
@@ -29,11 +35,7 @@
     </ul>
   </nav>
 
-  <%= yield(:sidebar) %>
-</div>
-
-<div id="content">
-  <%= yield %>
+  <%= yield :sidebar %>
 </div>
 
 </div>
