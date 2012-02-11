@@ -1,5 +1,5 @@
 require "bundler/capistrano"
-set :user, "username"
+set :user, "jbhannah"
 set :domain, "lugia.jbhannah.net"
 
 set :application, "jbhannah"
