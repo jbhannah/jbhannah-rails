@@ -6,7 +6,8 @@ set :rvm_ruby_string, '1.9.3@jbhannah'        # Or whatever env you want it to r
 
 set :user, "jbhannah"
 set :domain, "lugia.jbhannah.net"
-set :use_sudo, false
+
+default_run_options[:pty] = true
 
 set :application, "jbhannah"
 set :repository,  "git://github.com/jbhannah/jbhannah.git"
@@ -41,5 +42,15 @@ namespace :deploy do
 
   task :restart do
     run "cd /home/jbhannah/jbhannah/current; bundle exec thin restart -C config/thin.yml"
+  end
+end
+
+namespace :nginx do
+  task :symlink do
+    run "cd /etc/nginx/sites-enabled; rm -f jbhannah; ln -s /home/jbhannah/jbhannah/current/config/nginx.conf jbhannah"
+  end
+
+  task :reload do
+    run "service nginx reload"
   end
 end
