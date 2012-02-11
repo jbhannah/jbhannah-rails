@@ -3,7 +3,7 @@ set :user, "username"
 set :domain, "lugia.jbhannah.net"
 
 set :application, "jbhannah"
-set :repository,  "git://github.com/jbhannah/jbhannah.git"
+set :repository,  "git@github.com:jbhannah/jbhannah.git"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
