@@ -1,5 +1,5 @@
 ---
-chdir: /home/jbhannah/jbhannah/current
+chdir: /u/apps/jbhannah/current
 environment: production
 timeout: 30
 log: log/thin.log
