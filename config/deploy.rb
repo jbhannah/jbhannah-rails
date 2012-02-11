@@ -4,6 +4,7 @@ set :domain, "lugia.jbhannah.net"
 
 set :application, "jbhannah"
 set :repository,  "git@github.com:jbhannah/jbhannah.git"
+set :deploy_to,   "/home/jbhannah/jbhannah"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
