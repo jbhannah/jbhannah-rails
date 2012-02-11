@@ -30,12 +30,12 @@
 </div>
 
 <div id="sidebar">
-  <%= link_to image_tag("avatar.png", id: "avatar", title: Settings.name), root_path %>
+  <%= link_to image_tag("avatar.png", id: "avatar", alt: Settings.name, title: Settings.name), root_path %>
 
   <nav id="social_menu">
     <ul>
       <% Settings.social.each do |k, v| %>
-        <li id="<%= k %>"><%= link_to image_tag("social/#{k}.png", class: "social_icon", title: v["name"]), redirect_path(k), rel: "external" %></li>
+        <li id="<%= k %>"><%= link_to image_tag("social/#{k}.png", class: "social_icon", alt: v["name"], title: v["name"]), redirect_path(k), rel: "external" %></li>
       <% end %>
     </ul>
   </nav>
