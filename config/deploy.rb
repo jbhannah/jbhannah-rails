@@ -31,6 +31,10 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 #   end
 # end
 namespace :deploy do
+  task :chown do
+    run "#{try_sudo} chown -R #{user}:#{user} #{File.join(deploy_to, application)}"
+  end
+
   task :start do
     run "cd #{current_path}; bundle exec thin start -C config/thin.yml"
   end
@@ -54,5 +58,6 @@ namespace :nginx do
   end
 end
 
+after 'deploy:setup', 'deploy:chown'
 after 'deploy:update_code', 'nginx:symlink'
 after 'nginx:symlink', 'nginx:reload'
