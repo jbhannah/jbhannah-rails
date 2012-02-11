@@ -1,3 +1,5 @@
 Jbhannah::Application.routes.draw do
-  root :to => 'welcome#index'
+  match '/go/:key' => 'welcome#redirect', as: :redirect
+
+  root to: 'welcome#index'
 end
