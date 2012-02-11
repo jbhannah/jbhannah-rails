@@ -53,11 +53,9 @@ body {
         padding-top: 4px;
 
         ul {
-          @include horizontal-list;
+          @include horizontal-list(3px);
 
           li {
-            padding: 0 3px;
-
             &:first-child {
               padding-left: 4px;
             }
