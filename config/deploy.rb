@@ -32,7 +32,7 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 # end
 namespace :deploy do
   task :chown do
-    run "#{try_sudo} chown -R #{user}:#{user} #{File.join(deploy_to, application)}"
+    run "#{try_sudo} chown -R #{user}:#{user} #{File.join(deploy_to)}"
   end
 
   task :start do
