@@ -35,7 +35,7 @@
   <nav id="social_menu">
     <ul>
       <% Settings.social.each do |k, v| %>
-        <li id="<%= k %>"><%= link_to image_tag("social/#{k}.png", class: "social_icon", alt: v["name"]), v["url"] %></li>
+        <li id="<%= k %>"><%= link_to image_tag("social/#{k}.png", class: "social_icon", alt: v["name"]), v["url"], rel: "external" %></li>
       <% end %>
     </ul>
   </nav>
