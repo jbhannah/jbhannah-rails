@@ -2,6 +2,8 @@
 
 body {
   div#page {
+    padding-top: 5em;
+
     div#main {
       @include column(16, true);
       @include prepend(4);
