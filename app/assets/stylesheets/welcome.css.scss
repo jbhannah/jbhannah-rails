@@ -28,10 +28,6 @@ body.welcome {
 
       position: relative;
 
-      img#avatar {
-        @include column(5);
-      }
-
       nav#social_menu {
         @include column(11, true);
 
