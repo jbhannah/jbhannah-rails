@@ -11,7 +11,6 @@ default_run_options[:pty] = true
 
 set :application, "jbhannah"
 set :repository,  "git://github.com/jbhannah/jbhannah.git"
-set :deploy_to,   "/home/jbhannah/jbhannah"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -33,21 +32,21 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 # end
 namespace :deploy do
   task :start do
-    run "cd /home/jbhannah/jbhannah/current; bundle exec thin start -C config/thin.yml"
+    run "cd #{current_path}; bundle exec thin start -C config/thin.yml"
   end
 
   task :stop do
-    run "cd /home/jbhannah/jbhannah/current; bundle exec thin stop -C config/thin.yml"
+    run "cd #{current_path}; bundle exec thin stop -C config/thin.yml"
   end
 
   task :restart do
-    run "cd /home/jbhannah/jbhannah/current; bundle exec thin restart -C config/thin.yml"
+    run "cd #{current_path}; bundle exec thin restart -C config/thin.yml"
   end
 end
 
 namespace :nginx do
   task :symlink do
-    run "cd /etc/nginx/sites-enabled; rm -f jbhannah; ln -s /home/jbhannah/jbhannah/current/config/nginx.conf jbhannah"
+    run "cd /etc/nginx/sites-enabled; rm -f jbhannah; ln -s #{File.join(current_path, "config", "nginx.conf")} jbhannah"
   end
 
   task :reload do
