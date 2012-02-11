@@ -13,7 +13,8 @@ body.welcome {
         height: span(5);
 
         hgroup#site_title {
-          @include column(16, true);
+          @include column(11, true);
+          @include prepend(5);
         }
       }
 
@@ -49,8 +50,14 @@ body.welcome {
               padding-right: 0;
             }
 
-            img.social_icon {
+            a {
+              display: block;
+              height: 48px;
               width: 48px;
+
+              img.social_icon {
+                width: 48px;
+              }
             }
           }
         }
