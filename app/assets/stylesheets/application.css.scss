@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+
 @import "blueprint/reset";
 @import "blueprint";
 
@@ -5,6 +7,8 @@
 
 body {
   @include blueprint;
+
+  font-family: "Droid Serif", serif;
 
   div#page {
     @include container;
