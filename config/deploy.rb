@@ -3,7 +3,7 @@ set :user, "jbhannah"
 set :domain, "lugia.jbhannah.net"
 
 set :application, "jbhannah"
-set :repository,  "git@github.com:jbhannah/jbhannah.git"
+set :repository,  "git://github.com/jbhannah/jbhannah.git"
 set :deploy_to,   "/home/jbhannah/jbhannah"
 
 set :scm, :git
