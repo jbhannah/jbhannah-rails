@@ -46,10 +46,13 @@ end
 
 namespace :nginx do
   task :symlink do
-    run "cd /etc/nginx/sites-enabled; rm -f jbhannah; ln -s #{File.join(current_path, "config", "nginx.conf")} jbhannah"
+    run "cd /etc/nginx/sites-enabled; #{try_sudo} rm -f jbhannah; #{try_sudo} ln -s #{File.join(current_path, "config", "nginx.conf")} jbhannah"
   end
 
   task :reload do
-    run "service nginx reload"
+    run "#{try_sudo} service nginx reload"
   end
 end
+
+after 'deploy:update_code', 'nginx:symlink'
+after 'nginx:symlink', 'nginx:reload'
