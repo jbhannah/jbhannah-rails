@@ -46,7 +46,7 @@ end
 
 namespace :nginx do
   task :symlink do
-    run "cd /etc/nginx/sites-enabled; #{try_sudo} rm -f jbhannah; #{try_sudo} ln -s #{File.join(current_path, "config", "nginx.conf")} jbhannah"
+    run "cd /etc/nginx/sites-enabled; #{try_sudo} rm -f jbhannah; #{try_sudo} ln -s #{File.join(current_path, "config", "nginx.conf")} #{application}"
   end
 
   task :reload do
