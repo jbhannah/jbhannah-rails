@@ -18,7 +18,7 @@ server domain, :app, :web, :db, :primary => true
 
 namespace :deploy do
   task :chown do
-    run "#{try_sudo} chown -R #{user}:#{user} #{File.join(deploy_to)}"
+    run "#{try_sudo} chown -R #{user}:#{user} #{deploy_to}"
   end
 
   task :start do
