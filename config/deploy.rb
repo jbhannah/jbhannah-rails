@@ -29,3 +29,16 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 #     run "#{try_sudo} touch #{File.join(current_path,"tmp","restart.txt")}"
 #   end
 # end
+namespace :deploy do
+  task :start do
+    run "cd /home/jbhannah/jbhannah/current; bundle exec thin start -C config/thin.yml"
+  end
+
+  task :stop do
+    run "cd /home/jbhannah/jbhannah/current; bundle exec thin stop -C config/thin.yml"
+  end
+
+  task :restart do
+    run "cd /home/jbhannah/jbhannah/current; bundle exec thin restart -C config/thin.yml"
+  end
+end
