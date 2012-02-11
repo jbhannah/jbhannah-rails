@@ -6,6 +6,7 @@ set :rvm_ruby_string, '1.9.3@jbhannah'        # Or whatever env you want it to r
 
 set :user, "jbhannah"
 set :domain, "lugia.jbhannah.net"
+set :use_sudo, false
 
 set :application, "jbhannah"
 set :repository,  "git://github.com/jbhannah/jbhannah.git"
