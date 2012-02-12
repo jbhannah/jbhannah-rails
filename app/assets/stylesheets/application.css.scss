@@ -7,6 +7,7 @@
 @import "blueprint";
 
 @import "compass/typography/lists/horizontal-list";
+@import "compass/typography/lists/inline-list";
 
 body {
   @include blueprint;
@@ -25,6 +26,8 @@ body {
 
       header#header {
         @include column(18, true);
+
+        margin-bottom: 1em;
 
         hgroup#site_title {
           @include column(18, true);
@@ -70,6 +73,20 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+ul.delimited {
+  @include delimited-list;
+
+  li:last-child {
+    &:before {
+      content: 'and ';
+    }
+
+    &:after {
+      content: '.';
     }
   }
 }
