@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(() ->
-  $('a[rel="external"]').attr target: '_blank'
+  $('a[rel~="external"]').attr target: '_blank'
 )

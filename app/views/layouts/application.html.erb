@@ -35,7 +35,7 @@
   <nav id="social_menu">
     <ul>
       <% Settings.social.each do |k, v| %>
-        <li id="<%= k %>"><%= link_to image_tag("social/#{k}.png", class: "social_icon", alt: v["name"], title: v["name"]), redirect_path(k), rel: "external" %></li>
+        <li id="<%= k %>"><%= link_to image_tag("social/#{k}.png", class: "social_icon", alt: v["name"], title: v["name"]), redirect_path(k), rel: :external %></li>
       <% end %>
     </ul>
   </nav>
@@ -44,6 +44,12 @@
 </div>
 
 </div>
+
+<footer id="footer">
+Copyright © <%= Date.today.year %> <%= link_to Settings.name, root_url %>.
+<%= link_to "Some Rights Reserved", "http://creativecommons.org/licenses/by-nc-sa/3.0/", rel: [:external, :license] %>.
+<%= link_to "Website code on GitHub", "https://github.com/jbhannah/jbhannah", rel: :external %>.
+</footer>
 <%= render partial: 'layouts/gauges' if Rails.env.production? %>
 </body>
 </html>
