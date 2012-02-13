@@ -20,9 +20,7 @@ is allowed to run commands with `sudo`.
 ### Ruby
 
 Ruby 1.9.3 is installed via a system-wide (root)
-[RVM](http://beginrescueend.com/rvm/) installation. A gemset called
-`jbhannah` is specified in an `.rvmrc` file and Capistrano's
-`config/deploy.rb` into which all gems are installed.
+[RVM](http://beginrescueend.com/rvm/) installation.
 
 ### Javascript runtime
 
@@ -57,6 +55,32 @@ Since the app is run under the same username, local database connections
 are allowed via `ident` authentication, which is the default in
 PostgreSQL on Ubuntu.
 
+## Configuration
+
+### Application
+
+`config/application.yml` contains values that are used application-wide.
+[Settingslogic](https://github.com/binarylogic/settingslogic) is used to
+read the properties defined in this file.
+
+### Thin
+
+The application is run on a two-instance Thin cluster, configured at
+`config/thin.yml`, which listens over UNIX sockets for requests
+forwarded by nginx.
+
+### nginx
+
+During the deployment process, a configuration file at
+`config/nginx.conf` is symbolically linked into the nginx system
+configuration directory at `/etc/nginx/sites-available`, and the
+configuration is then reloaded. The configuration file is written such
+that
+
+ * requests to www.jbhannah.net are redirected to jbhannah.net
+ * static asset requests are handled by nginx directly
+ * all other requests are reverse-proxied to the Thin cluster
+
 ## Deployment
 
 From the local development machine:
@@ -64,3 +88,13 @@ From the local development machine:
     $ cap deploy:setup
     $ cap deploy:check
     $ cap deploy
+
+The application can be started, stopped, and restarted with
+
+    $ cap deploy:start
+    $ cap deploy:stop
+    $ cap deploy:restart
+
+nginx can be reloaded with
+
+    $ cap nginx:reload
