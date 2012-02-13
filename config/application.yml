@@ -1,6 +1,11 @@
 name: "Jesse B. Hannah"
 handle: "jbhannah"
 
+birthday:
+  year: 1989
+  month: 3
+  day: 20
+
 social:
   fb:
     name: "Facebook"
