@@ -3,8 +3,13 @@
 //$font-color: white;
 //$blueprint-background-color: #4a525a;
 
+$blueprint-font-family: "Droid Serif", "Georgia", "Times New Roman", serif;
+$blueprint-font-size: 14px;
+
 @import "blueprint/reset";
 @import "blueprint";
+
+@include blueprint;
 
 @import "compass/typography/lists/horizontal-list";
 @import "compass/typography/lists/inline-list";
@@ -14,10 +19,7 @@ $footer-height: 3em;
 @include sticky-footer;
 
 body {
-  @include blueprint;
-
   background: $blueprint-background-color;
-  font-family: "Droid Serif", serif;
 
   div#root {
     @include container;
