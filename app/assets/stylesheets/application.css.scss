@@ -9,16 +9,24 @@
 @import "compass/typography/lists/horizontal-list";
 @import "compass/typography/lists/inline-list";
 
+$footer-height: 3em;
+@import "compass/layout/sticky-footer";
+@include sticky-footer;
+
 body {
   @include blueprint;
 
   background: $blueprint-background-color;
   font-family: "Droid Serif", serif;
 
-  div#page {
+  div#root {
     @include container;
 
-    padding-top: 1em;
+    margin-bottom: -1 * $footer-height;
+
+    div#root_header {
+      padding-top: 1em;
+    }
 
     div#main {
       @include column(18, true);
@@ -77,6 +85,8 @@ body {
   }
 
   footer#footer {
+    width: 100%;
+    text-align: center;
     font-size: smaller;
   }
 }

@@ -14,7 +14,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= params[:controller] + ' ' + params[:action] %>">
-<div id="page">
+<div id="root">
+<div id="root_header"></div>
 
 <div id="main">
   <header id="header">
@@ -43,13 +44,15 @@
   <%= yield :sidebar %>
 </div>
 
+<div id="root_footer"></div>
 </div>
 
 <footer id="footer">
-Copyright © <%= Date.today.year %> <%= link_to Settings.name, root_url %>.
-<%= link_to "Some Rights Reserved", "http://creativecommons.org/licenses/by-nc-sa/3.0/", rel: [:external, :license] %>.
-<%= link_to "Website code on GitHub", "https://github.com/jbhannah/jbhannah", rel: :external %>.
+  Copyright © <%= Date.today.year %> <%= link_to Settings.name, root_url %>.
+  <%= link_to "Some Rights Reserved", "http://creativecommons.org/licenses/by-nc-sa/3.0/", rel: [:external, :license] %>.
+  <%= link_to "Website code on GitHub", "https://github.com/jbhannah/jbhannah", rel: :external %>.
 </footer>
+
 <%= render partial: 'layouts/gauges' if Rails.env.production? %>
 </body>
 </html>

@@ -1,6 +1,8 @@
 body.welcome.index {
-  div#page {
-    padding-top: 5em;
+  div#root {
+    div#root_header {
+      padding-top: 5em;
+    }
 
     div#main {
       @include column(16, true);
