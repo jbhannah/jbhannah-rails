@@ -48,7 +48,7 @@
 </div>
 
 <footer id="footer">
-  Copyright © <%= Date.today.year %> <%= link_to Settings.name, root_url %>.
+  Copyright © 2012<%= '-' + Date.today.year.to_s if Date.today.year > 2012 %> <%= link_to Settings.name, root_url %>.
   <%= link_to "Some Rights Reserved", "http://creativecommons.org/licenses/by-nc-sa/3.0/", rel: [:external, :license] %>.
   <%= link_to "Website code on GitHub", "https://github.com/jbhannah/jbhannah", rel: :external %>.
 </footer>
