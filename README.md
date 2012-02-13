@@ -15,7 +15,9 @@ All requirements are described under that assumption.
 ### User
 
 A user called `jbhannah` exists and is SSH private-key enabled. The user
-is allowed to run commands with `sudo`.
+is allowed to run commands with `sudo`. `root` and password-based SSH
+logins are disabled.
+
 
 ### Ruby
 
