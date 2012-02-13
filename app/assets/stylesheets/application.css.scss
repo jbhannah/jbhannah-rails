@@ -82,6 +82,11 @@ body {
         }
       }
     }
+
+    div#root_footer {
+      height: $footer-height + 1em;
+      clear: both;
+    }
   }
 
   footer#footer {
