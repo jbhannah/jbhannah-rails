@@ -86,6 +86,12 @@ ul.delimited {
     }
 
     &:after {
+      content: ',';
+    }
+  }
+
+  &.period {
+    li:last-child:after {
       content: '.';
     }
   }
