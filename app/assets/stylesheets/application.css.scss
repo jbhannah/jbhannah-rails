@@ -4,7 +4,7 @@
 //$blueprint-background-color: #4a525a;
 
 $blueprint-font-family: "Droid Serif", "Georgia", "Times New Roman", serif;
-$blueprint-font-size: 14px;
+$blueprint-font-size: 16px;
 
 @import "blueprint/reset";
 @import "blueprint";
@@ -15,6 +15,7 @@ $blueprint-font-size: 14px;
 @import "compass/typography/lists/inline-list";
 
 $footer-height: 3em;
+
 @import "compass/layout/sticky-footer";
 @include sticky-footer;
 
