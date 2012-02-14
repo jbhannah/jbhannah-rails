@@ -1,10 +1,4 @@
-<%= content_tag_for :section, @post do %>
-  <header id="post_header">
-    <h1><%= @post.title %></h1>
-  </header>
-
-  <%= @post.body %>
-<% end %>
+<%= render @post %>
 
 
 <%= link_to 'Back', posts_path %>
