@@ -1,7 +1,10 @@
-<%= content_tag_for :section, post do %>
+<%= content_tag_for :article, post do %>
   <header class="post_header">
     <h1><%= link_to post.title, post %></h1>
-    <div class="meta">Posted by <%= post.user.to_s.split.first %> at <%= post.created_at.to_formatted_s(:long) %></div>
+    <div class="meta">
+      Posted by <%= post.user.to_s.split.first %> at
+      <time pubdate datetime="<%= post.created_at.utc.to_s(:rfc822) %>"><%= post.created_at.strftime("%A, %e %B %Y %H:%M %Z") %></time>
+    </div>
   </header>
 
   <%= sanitize post.body %>
