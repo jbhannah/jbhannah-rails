@@ -80,4 +80,13 @@ RailsAdmin.config do |config|
   # All fields marked as 'hidden' won't be shown anywhere in the rails_admin unless you mark them as visible. (visible(true))
 
   config.authorize_with :cancan
+
+  config.model Post do
+    edit do
+      fields :title, :user, :published
+      field :body do
+        ckeditor true
+      end
+    end
+  end
 end

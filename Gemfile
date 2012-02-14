@@ -27,6 +27,7 @@ end
 gem 'jquery-rails'
 
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'ckeditor', '~> 3.7.0.rc'
 gem 'devise'
 gem 'cancan'
 gem 'settingslogic'

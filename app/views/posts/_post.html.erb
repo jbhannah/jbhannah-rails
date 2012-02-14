@@ -4,5 +4,5 @@
     <div class="meta">Posted by <%= post.user.to_s.split.first %> at <%= post.created_at.to_formatted_s(:long) %></div>
   </header>
 
-  <%= post.body %>
+  <%= sanitize post.body %>
 <% end %>
