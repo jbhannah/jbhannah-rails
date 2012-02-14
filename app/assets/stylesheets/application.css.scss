@@ -38,8 +38,6 @@ body {
       header#header {
         @include column(18, true);
 
-        margin-bottom: 1em;
-
         hgroup#site_title {
           @include column(18, true);
 

@@ -13,6 +13,7 @@ body.welcome.index {
         @include column(16, true);
 
         height: span(5);
+        margin-bottom: 1em;
 
         hgroup#site_title {
           @include column(11, true);
