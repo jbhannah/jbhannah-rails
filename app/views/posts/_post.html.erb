@@ -1,6 +1,7 @@
 <%= content_tag_for :section, post do %>
-  <header id="post_header">
+  <header class="post_header">
     <h1><%= link_to post.title, post %></h1>
+    <div class="meta">Posted by <%= post.user.to_s.split.first %> at <%= post.created_at.to_formatted_s(:long) %></div>
   </header>
 
   <%= post.body %>

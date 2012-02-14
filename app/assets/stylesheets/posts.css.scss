@@ -4,8 +4,16 @@
 
 body.posts {
   section.post {
-    h1 {
-      font-size: 2em;
+    header.post_header {
+      margin-bottom: 1em;
+
+      h1 {
+        font-size: 2em;
+      }
+
+      div.meta {
+        font-size: smaller;
+      }
     }
   }
 }
