@@ -1,22 +1,10 @@
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
+<%= content_tag_for :section, @post do %>
+  <header id="post_header">
+    <h1><%= @post.title %></h1>
+  </header>
 
-<p>
-  <b>User:</b>
-  <%= @post.user %>
-</p>
-
-<p>
-  <b>Body:</b>
   <%= @post.body %>
-</p>
-
-<p>
-  <b>Published:</b>
-  <%= @post.published %>
-</p>
+<% end %>
 
 
 <%= link_to 'Back', posts_path %>
