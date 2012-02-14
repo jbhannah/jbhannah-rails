@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/sferik/rails_admin.git
-  revision: 1603845de473e61ffdd6beb6fb17f8977d6abe52
+  revision: cdb02e108ed30c2bce5066360f8220cb757e47e4
   specs:
     rails_admin (0.0.1)
       bbenezech-nested_form (~> 0.0.3)

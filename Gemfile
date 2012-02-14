@@ -27,7 +27,7 @@ end
 gem 'jquery-rails'
 
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-gem "devise"
+gem 'devise'
 gem 'settingslogic'
 
 # To use ActiveModel has_secure_password
