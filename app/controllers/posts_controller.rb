@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   load_resource
 
   def index
-    @posts = @posts.page(params[:page])
+    @posts = @posts.published.page(params[:page])
   end
 
   def show
