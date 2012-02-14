@@ -26,6 +26,7 @@ end
 
 gem 'jquery-rails'
 
+gem 'devise'
 gem 'settingslogic'
 
 # To use ActiveModel has_secure_password
