@@ -1,0 +1,9 @@
+<div id="posts">
+  <h3><%= link_to "Latest Blog Posts", posts_path %></h3>
+
+  <ul>
+  <%= content_tag_for(:li, latest_posts) do |post| %>
+    <%= link_to post.title, post %>
+  <% end %>
+  <ul>
+</div>

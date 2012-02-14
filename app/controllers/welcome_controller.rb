@@ -2,7 +2,6 @@ class WelcomeController < ApplicationController
   caches_action :index
 
   def index
-    @posts = Post.published.first(5)
   end
 
   def redirect
