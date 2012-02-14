@@ -15,3 +15,13 @@
 
 who lives with his <%= link_to "cat", "http://www.flickr.com/photos/jbhannah/sets/72157626784508774/", rel: :external %> in Tempe, AZ.
 </div>
+
+<div id="posts">
+  <h3>Posts</h3>
+
+  <ul>
+  <%= content_tag_for(:li, @posts) do |post| %>
+    <%= link_to post.title, post %>
+  <% end %>
+  <ul>
+</div>
