@@ -3,7 +3,9 @@ Jbhannah::Application.routes.draw do
 
   devise_for :users
 
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show] do
+    get '/page/:page', on: :collection, action: :index
+  end
 
   match '/go/:key' => 'welcome#redirect', as: :redirect
 
