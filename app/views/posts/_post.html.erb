@@ -3,7 +3,7 @@
     <h1><%= link_to post.title, post %></h1>
     <div class="meta">
       Posted by <%= post.user.to_s.split.first %> at
-      <time pubdate datetime="<%= post.created_at.utc.to_s(:rfc822) %>"><%= post.created_at.strftime("%A, %e %B %Y %H:%M %Z") %></time>
+      <time pubdate datetime="<%= post.published_at.utc.to_s(:rfc822) %>"><%= post.published_at.strftime("%A, %e %B %Y %H:%M %Z") %></time>
     </div>
   </header>
 
