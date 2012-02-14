@@ -30,7 +30,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'devise'
 gem 'cancan'
 gem 'settingslogic'
-gem 'will_paginate', '~> 3.0'
+gem 'kaminari'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

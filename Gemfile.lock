@@ -186,7 +186,6 @@ GEM
       multi_json (>= 1.0.2)
     warden (1.1.0)
       rack (>= 1.0)
-    will_paginate (3.0.3)
 
 PLATFORMS
   ruby
@@ -199,6 +198,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   jquery-rails
+  kaminari
   pg
   rails (= 3.2.1)
   rails_admin!
@@ -208,4 +208,3 @@ DEPENDENCIES
   sqlite3
   thin
   uglifier (>= 1.0.3)
-  will_paginate (~> 3.0)
