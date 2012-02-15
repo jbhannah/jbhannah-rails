@@ -5,7 +5,7 @@ Jbhannah::Application.routes.draw do
 
   devise_for :users
 
-  resources :posts, only: [:index, :show] do
+  resources :posts, path: "/blog", only: [:index, :show] do
     get '/page/:page', on: :collection, action: :index
   end
 
