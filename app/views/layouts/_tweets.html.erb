@@ -1,0 +1,9 @@
+<div id="latest_tweets">
+  <h3>Latest Tweets</h3>
+
+  <ul>
+  <% latest_tweets.each do |tweet| %>
+    <li><%= tweet.text %></li>
+  <% end %>
+  </ul>
+</div>

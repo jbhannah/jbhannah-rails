@@ -54,6 +54,8 @@ body {
       @include column(5);
       @include pull(24, true);
 
+      font-size: 80%;
+
       img#avatar {
         @include column(5);
       }
@@ -94,6 +96,14 @@ body {
     width: 100%;
     text-align: center;
     font-size: smaller;
+  }
+}
+
+div#latest_tweets {
+  ul {
+    li {
+      font-size: 80%;
+    }
   }
 }
 

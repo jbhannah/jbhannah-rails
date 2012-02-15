@@ -10,4 +10,8 @@ module ApplicationHelper
     )
     a
   end
+
+  def latest_tweets
+    Twitter.user_timeline(Settings.handle).first(5)
+  end
 end
