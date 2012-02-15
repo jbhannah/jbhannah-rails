@@ -5,7 +5,9 @@
   <% latest_tweets.each do |tweet| %>
     <li>
       <%= auto_link tweet.text, html: { rel: :external } %>
-      <%= link_to time_ago_in_words(tweet.created_at) + " ago", Settings.social.twitter.url + "/status/#{tweet.id}", rel: :external %>
+      <%= link_to Settings.social.twitter.url + "/status/#{tweet.id}", rel: :external do %>
+        <time datetime="<%= tweet.created_at.utc.to_s(:rfc822) %>"><%= time_ago_in_words(tweet.created_at) + " ago" %></time>
+      <% end %>
     </li>
   <% end %>
   </ul>
