@@ -1,9 +1,12 @@
 <div id="latest_tweets">
-  <h3>Latest Tweets</h3>
+  <h3><%= link_to "Latest Tweets", Settings.social.twitter.url, rel: :external %></h3>
 
   <ul>
   <% latest_tweets.each do |tweet| %>
-    <li><%= tweet.text %></li>
+    <li>
+      <%= tweet.text %>
+      <%= link_to time_ago_in_words(tweet.created_at) + " ago", Settings.social.twitter.url + "/status/#{tweet.id}", rel: :external %>
+    </li>
   <% end %>
   </ul>
 </div>
