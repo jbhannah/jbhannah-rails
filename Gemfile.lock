@@ -156,6 +156,7 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     remotipart (1.0.2)
+    rinku (1.5.1)
     rspec (2.8.0)
       rspec-core (~> 2.8.0)
       rspec-expectations (~> 2.8.0)
@@ -218,6 +219,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.1)
   rails_admin!
+  rinku
   rspec-rails (~> 2.8)
   sass-rails (~> 3.2.3)
   settingslogic

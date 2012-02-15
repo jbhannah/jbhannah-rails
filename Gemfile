@@ -27,8 +27,9 @@ end
 gem 'jquery-rails'
 
 gem 'twitter'
+gem 'rinku', require: 'rails_rinku'
 
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'rails_admin', git: 'git://github.com/sferik/rails_admin.git'
 gem 'ckeditor', '~> 3.7.0.rc'
 gem 'devise'
 gem 'cancan'
