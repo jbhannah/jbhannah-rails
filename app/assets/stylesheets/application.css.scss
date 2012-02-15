@@ -84,6 +84,12 @@ body {
           }
         }
       }
+
+      div {
+        @include column(5);
+
+        margin-top: 1.5em;
+      }
     }
 
     div#root_footer {
@@ -99,8 +105,16 @@ body {
   }
 }
 
+div#latest_posts {
+  ul {
+    margin-bottom: 0;
+  }
+}
+
 div#latest_tweets {
   ul {
+    margin-bottom: 0;
+
     li {
       font-size: 80%;
     }
