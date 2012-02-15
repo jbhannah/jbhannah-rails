@@ -23,6 +23,20 @@ body.welcome.index {
 
       div#content {
         @include column(16, true);
+
+        div#bio {
+          @include column(16, true);
+
+          margin-bottom: 1.5em;
+        }
+
+        div#latest_posts {
+          @include column(8);
+        }
+
+        div#latest_tweets {
+          @include column(8, true);
+        }
       }
     }
 
