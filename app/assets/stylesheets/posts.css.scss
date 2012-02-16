@@ -4,7 +4,7 @@
 
 body.posts {
   article.post {
-    margin-bottom: 1.5em;
+    @include column(18, true);
 
     header.post_header {
       margin-bottom: 1.5em;
@@ -15,6 +15,24 @@ body.posts {
 
       div.meta {
         font-size: smaller;
+      }
+    }
+  }
+
+  nav.posts_nav {
+    @include column(18, true);
+
+    div.post_nav {
+      @include column(9);
+
+      &.prev_post {
+        text-align: left;
+      }
+
+      &.next_post {
+        @include last;
+
+        text-align: right;
       }
     }
   }

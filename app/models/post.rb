@@ -9,6 +9,14 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :title, :user_id, :body
 
+  def prev
+    Post.find(id - 1) if Post.exists?(id - 1)
+  end
+
+  def next
+    Post.find(id + 1) if Post.exists?(id + 1)
+  end
+
   private
   def update_published_at
     self.published_at = Time.now if published? and published_at.nil?
