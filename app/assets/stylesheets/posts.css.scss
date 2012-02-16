@@ -22,11 +22,17 @@ body.posts {
   nav.posts_nav {
     @include column(18, true);
 
+    font-size: smaller;
+
     div.post_nav {
-      @include column(9);
+      @include column(6);
 
       &.prev_post {
         text-align: left;
+      }
+
+      &.back {
+        text-align: center;
       }
 
       &.next_post {
