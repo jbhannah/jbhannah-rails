@@ -3,6 +3,13 @@ class PostsController < ApplicationController
   caches_action :index, :show
 
   def index
+    if params[:year]
+      t = Time.utc(params[:year], params[:month], params[:day])
+      @posts = @posts.where(published_at: t..(t + 1.year))
+      @posts = @posts.where(published_at: t..(t + 1.month)) if params[:month]
+      @posts = @posts.where(published_at: t..(t + 1.day))   if params[:day]
+    end
+
     @posts = @posts.published.page(params[:page])
   end
 

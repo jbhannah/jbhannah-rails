@@ -5,8 +5,13 @@ Jbhannah::Application.routes.draw do
 
   devise_for :users
 
-  resources :posts, path: "/blog", only: [:index, :show] do
-    get '/page/:page', on: :collection, action: :index
+  resources :posts, path: '/blog', only: [:index, :show] do
+    get '(archive/:year(/:month(/:day)))(/page/:page)', action: :index, on: :collection, constraints: {
+      year:  /\d{4}/,
+      month: /\d{2}/,
+      day:   /\d{2}/,
+      page:  /\d+/
+    }
   end
 
   match '/go/:key' => 'welcome#redirect', as: :redirect
