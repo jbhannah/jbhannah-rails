@@ -1,4 +1,10 @@
 class Post < ActiveRecord::Base
+  class << self
+    def months
+      all.group_by { |post| post.published_at.beginning_of_month }.keys
+    end
+  end
+
   belongs_to :user
   paginates_per 10
 

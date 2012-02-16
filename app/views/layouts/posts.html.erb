@@ -11,6 +11,8 @@
 <% end %>
 
 <% content_for :sidebar do %>
+  <%= render partial: 'posts/months' %>
+
   <%= render partial: 'posts/latest' %>
 
   <%= render partial: 'layouts/tweets' %>
