@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  load_resource
+  load_and_authorize_resource
   caches_action :index, :show
 
   def index
@@ -10,7 +10,7 @@ class PostsController < ApplicationController
       @posts = @posts.where(published_at: t..(t + 1.day))   if params[:day]
     end
 
-    @posts = @posts.published.page(params[:page])
+    @posts = @posts.page(params[:page])
   end
 
   def show

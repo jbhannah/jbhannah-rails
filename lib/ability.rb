@@ -8,7 +8,7 @@ class Ability
       can :access, :rails_admin
       can :manage, :all
     else
-      can :read, :all
+      can :read, Post, published: true
     end
   end
 end
