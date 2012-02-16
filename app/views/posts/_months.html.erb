@@ -1,9 +1,12 @@
 <div class="sidebar_block" id="post_months">
-  <h3>Blog Archives</h3>
+  <h3>Monthly Archives</h3>
 
   <ul>
   <% Post.months.each do |month| %>
-    <li><%= link_to month.strftime("%B %Y"), archive_posts_path(year: month.year, month: month.strftime("%m")) %></li>
+    <li>
+      <%= link_to month.strftime("%B %Y"), archive_posts_path(year: month.year, month: month.strftime("%m")) %>
+      (<%= Post.by_month(month.year, month.month).count %>)
+    </li>
   <% end %>
   </ul>
 </div>
