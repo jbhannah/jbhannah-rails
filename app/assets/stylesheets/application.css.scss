@@ -51,6 +51,8 @@ body {
       @include column(5);
       @include pull(24, true);
 
+      font-size: 80%;
+
       img#avatar {
         @include column(5);
       }

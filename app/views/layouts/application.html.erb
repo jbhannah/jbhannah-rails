@@ -2,7 +2,12 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title><%= Settings.name %></title>
+  <title>
+    <% if content_for?(:title) %>
+      <%= yield :title %> –
+    <% end %>
+    <%= Settings.name %>
+  </title>
 
   <%= favicon_link_tag asset_path("favicon.ico") %>
 
