@@ -3,7 +3,11 @@
     <h1><%= link_to_unless_current post.title, post %></h1>
     <div class="meta">
       Posted by <%= post.user.to_s.split.first %>
-      <time pubdate datetime="<%= post.published_at.utc.to_s(:rfc822) %>"><%= post.published_at.strftime("on %A, %e %B %Y at %H:%M %Z") %></time>
+      <% if post.published_at %>
+        <time pubdate datetime="<%= post.published_at.utc.to_s(:rfc822) %>"><%= post.published_at.strftime("on %A, %e %B %Y at %H:%M %Z") %></time>
+      <% else %>
+        <time pubdate datetime="<%= post.created_at.utc.to_s(:rfc822) %>"><%= post.created_at.strftime("on %A, %e %B %Y at %H:%M %Z") %></time>
+      <% end %>
       –
       <%= link_to "Permalink", post %>
     </div>
