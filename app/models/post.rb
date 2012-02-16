@@ -3,18 +3,18 @@ class Post < ActiveRecord::Base
   paginates_per 10
 
   scope :published, where(published: true)
-  default_scope order('published_at desc')
+  default_scope order('published_at DESC')
 
   before_validation :update_published_at
 
   validates_presence_of :title, :user_id, :body
 
   def prev
-    Post.find(id - 1) if Post.exists?(id - 1)
+    Post.where("published_at < ?", published_at).first if published?
   end
 
   def next
-    Post.find(id + 1) if Post.exists?(id + 1)
+    Post.where("published_at > ?", published_at).last if published?
   end
 
   private
