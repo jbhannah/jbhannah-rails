@@ -4,6 +4,9 @@
   <ul>
   <%= content_tag_for(:li, latest_posts) do |post| %>
     <%= link_to post.title, post %>
+    <div class="meta">
+      <time datetime="<%= post.published_at.utc.to_s(:rfc822) %>"><%= post.published_at.strftime("%e %B %Y") %></time>
+    </div>
   <% end %>
-  <ul>
+  </ul>
 </div>

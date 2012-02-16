@@ -51,8 +51,6 @@ body {
       @include column(5);
       @include pull(24, true);
 
-      font-size: 80%;
-
       img#avatar {
         @include column(5);
       }
@@ -102,13 +100,13 @@ body {
   }
 }
 
-div.sidebar_block {
-  h3 {
-    margin-bottom: 0.5em;
-  }
-
+div#latest_posts {
   ul {
-    margin-bottom: 0;
+    li.post {
+      div.meta {
+        font-size: 80%;
+      }
+    }
   }
 }
 
@@ -119,9 +117,23 @@ div#latest_tweets {
     list-style-type: none;
 
     li {
-      font-size: 80%;
       margin-bottom: 1em;
+      font-size: 80%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
+  }
+}
+
+div.sidebar_block {
+  h3 {
+    margin-bottom: 0.5em;
+  }
+
+  ul {
+    margin-bottom: 0;
   }
 }
 
