@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   def index
     if params[:year]
-      t = Time.utc(params[:year], params[:month], params[:day])
+      t = Time.new(params[:year], params[:month], params[:day])
       @posts = @posts.where(published_at: t..(t + 1.year))
       @posts = @posts.where(published_at: t..(t + 1.month)) if params[:month]
       @posts = @posts.where(published_at: t..(t + 1.day))   if params[:day]
