@@ -1,6 +1,12 @@
 <% content_for :title do %>
   <%= @post.title + " –" if @post %>
   Blog
+  <% if @date %>
+    –
+    <%= @date.strftime('%e') if params[:day] %>
+    <%= @date.strftime('%B') if params[:month] %>
+    <%= @date.strftime('%Y') %>
+  <% end %>
   <%= "– Page " + params[:page] if params[:page] %>
 <% end %>
 

@@ -1,3 +1,12 @@
+<% if @date %>
+  <h2>
+    Archive for
+    <%= @date.strftime('%e') if params[:day] %>
+    <%= @date.strftime('%B') if params[:month] %>
+    <%= @date.strftime('%Y') %>
+  </h2>
+<% end %>
+
 <%= render @posts or "No posts matched your criteria." %>
 
 <%= paginate @posts %>
