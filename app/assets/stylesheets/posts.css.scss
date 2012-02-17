@@ -29,4 +29,10 @@ body.posts {
       }
     }
   }
+
+  div#disqus_thread {
+    @include column(18, true);
+
+    margin-top: 1.5em;
+  }
 }

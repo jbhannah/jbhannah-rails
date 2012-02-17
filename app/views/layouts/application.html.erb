@@ -11,10 +11,10 @@
 
   <%= favicon_link_tag asset_path("favicon.ico") %>
 
-  <%= stylesheet_link_tag "application", controller_name, media: "all" %>
+  <%= stylesheet_link_tag :application, controller_name, media: "all" %>
 
   <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>
-  <%= javascript_include_tag "application", controller_name %>
+  <%= javascript_include_tag :application, controller_name %>
 
   <%= csrf_meta_tags %>
 </head>

@@ -64,6 +64,7 @@ module Jbhannah
     config.assets.version = '1.0'
 
     # Precompile assets
+    config.assets.precompile += ['disqus.js']
     config.assets.precompile += [/welcome.(css|js)/, /posts.(css|js)/]
   end
 end
