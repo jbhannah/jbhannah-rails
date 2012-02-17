@@ -8,14 +8,7 @@ body.posts {
 
     header.post_header {
       margin-bottom: 1.5em;
-
-      h1 {
-        font-size: 2em;
-      }
-
-      div.meta {
-        font-size: smaller;
-      }
+      font-size: 80%;
     }
   }
 
@@ -25,14 +18,10 @@ body.posts {
     font-size: smaller;
 
     div.post_nav {
-      @include column(6);
+      @include column(9);
 
       &.prev_post {
         text-align: left;
-      }
-
-      &.back {
-        text-align: center;
       }
 
       &.next_post {
