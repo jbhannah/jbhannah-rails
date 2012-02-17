@@ -25,7 +25,7 @@
 <div id="main">
   <header id="header">
     <hgroup id="site_title">
-      <h1><%= Settings.name %></h1>
+      <h1><%= link_to_unless_current Settings.name, root_path %></h1>
       <h2><%= Settings.handle %></h2>
     </hgroup>
   </header>
