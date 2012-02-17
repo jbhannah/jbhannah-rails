@@ -24,8 +24,12 @@ class Post < ActiveRecord::Base
   scope :published, where(published: true)
   default_scope order('published_at DESC')
 
-  before_validation :update_published_at
+  before_validation :update_published_at, :set_slug
   validates_presence_of :title, :user_id, :body
+
+  def to_param
+    slug
+  end
 
   def prev
     Post.where("published_at < ?", published_at).first if published?
@@ -36,6 +40,10 @@ class Post < ActiveRecord::Base
   end
 
   private
+  def set_slug
+    self.slug = title.parameterize
+  end
+
   def update_published_at
     self.published_at = Time.now if published? and published_at.nil?
   end
