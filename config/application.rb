@@ -68,5 +68,6 @@ module Jbhannah
     config.assets.precompile += ['disqus.js']
     config.assets.precompile += [/welcome.(css|js)/, /posts.(css|js)/]
     config.assets.precompile += [/devise\/sessions.(css|js)/]
+    config.assets.precompile ++ ['ckeditor/ckeditor']
   end
 end
