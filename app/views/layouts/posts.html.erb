@@ -6,6 +6,8 @@
     <%= @date.strftime('%e') if params[:day] %>
     <%= @date.strftime('%B') if params[:month] %>
     <%= @date.strftime('%Y') %>
+  <% elsif @tag %>
+    – <%= @tag %>
   <% end %>
   <%= "– Page " + params[:page] if params[:page] %>
 <% end %>

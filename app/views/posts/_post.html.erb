@@ -13,14 +13,16 @@
       <%= link_to "Permalink", post %>
     </div>
 
+    <% unless post.tags.empty? %>
     <div class="tags">
-      Tags:
+      Tagged
       <ul class="delimited">
       <% post.tags.each do |pt| %>
-        <li><%= pt %></li>
+        <li><%= link_to pt, tagged_posts_path(pt) %></li>
       <% end %>
       </ul>
     </div>
+    <% end %>
   </header>
 
   <%= sanitize post.body %>

@@ -5,6 +5,8 @@
     <%= @date.strftime('%B') if params[:month] %>
     <%= @date.strftime('%Y') %>
   </h2>
+<% elsif @tag %>
+  <h2>Posts tagged "<%= @tag %>"</h2>
 <% end %>
 
 <%= render @posts or "No posts matched your criteria." %>

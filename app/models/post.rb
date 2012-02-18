@@ -22,11 +22,16 @@ class Post < ActiveRecord::Base
     where("published_at >= ? AND published_at < ?", t, t + 1.day)
   }
 
+  scope :tagged, lambda { |tag|
+    tag = Tag.find_by_slug!(tag) unless tag.is_a?(Tag)
+    joins(:tags).where(tags: { id: tag.id })
+  }
+
   scope :published, where(published: true)
   default_scope order('published_at DESC')
 
   before_validation :update_published_at, :set_slug
-  validates_presence_of :title, :user_id, :body
+  validates_presence_of :title, :slug, :user_id, :body
 
   def to_param
     slug

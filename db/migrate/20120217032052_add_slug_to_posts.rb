@@ -10,7 +10,7 @@ class AddSlugToPosts < ActiveRecord::Migration
   end
 
   def down
+    remove_index  :posts, :slug
     remove_column :posts, :slug, :string
-    remove_index  :posts, :slug, unique: true
   end
 end

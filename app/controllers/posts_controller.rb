@@ -16,6 +16,9 @@ class PostsController < ApplicationController
       else
         @posts = @posts.by_year(params[:year])
       end
+    elsif params[:tag]
+      @tag   = Tag.find_by_slug!(params[:tag])
+      @posts = @posts.tagged(@tag)
     end
 
     @posts = @posts.page(params[:page])
