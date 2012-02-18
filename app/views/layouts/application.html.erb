@@ -11,8 +11,9 @@
   </title>
 
   <%= favicon_link_tag asset_path("favicon.ico") %>
+  <%= auto_discovery_link_tag :atom, { controller: :posts, action: :index, format: :atom } %>
 
-  <%= stylesheet_link_tag :application, controller_name, media: "all" %>
+  <%= stylesheet_link_tag :application, controller_name, media: :all %>
 
   <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" %>
   <%= javascript_include_tag :application, controller_name %>
