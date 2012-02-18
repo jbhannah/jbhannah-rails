@@ -8,7 +8,7 @@
     <li class="tweet">
       <%= auto_link tweet.text, html: { rel: :external } %>
       <%= link_to Settings.social.twitter.url + "/status/#{tweet.id}", rel: :external do %>
-        <time datetime="<%= tweet.created_at.utc.to_s(:rfc822) %>"><%= time_ago_in_words(tweet.created_at) + " ago" %></time>
+        <time datetime="<%= tweet.created_at.utc.iso8601 %>"><%= time_ago_in_words(tweet.created_at) + " ago" %></time>
       <% end %>
     </li>
   <% end %>

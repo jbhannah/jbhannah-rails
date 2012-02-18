@@ -5,9 +5,9 @@
     <div class="meta">
       Posted by <%= post.user.to_s.split.first %>
       <% if post.published_at %>
-        <time pubdate datetime="<%= post.published_at.utc.to_s(:rfc822) %>"><%= post.published_at.strftime("on %A, %e %B %Y at %H:%M %Z") %></time>
+        <time pubdate datetime="<%= post.published_at.utc.iso8601 %>"><%= post.published_at.strftime("on %A, %e %B %Y at %H:%M %Z") %></time>
       <% else %>
-        <time pubdate datetime="<%= post.created_at.utc.to_s(:rfc822) %>"><%= post.created_at.strftime("on %A, %e %B %Y at %H:%M %Z") %></time>
+        <time pubdate datetime="<%= post.created_at.utc.iso8601 %>"><%= post.created_at.strftime("on %A, %e %B %Y at %H:%M %Z") %></time>
       <% end %>
       –
       <%= link_to "Permalink", post %>
