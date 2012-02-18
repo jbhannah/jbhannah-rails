@@ -1,4 +1,4 @@
-<% cache params.to_s + "_header" do %>
+<% cache "header_" + request.env['PATH_INFO'] do %>
 <!DOCTYPE html>
 <html>
 <head>
