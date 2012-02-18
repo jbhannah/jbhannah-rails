@@ -142,12 +142,14 @@ div.sidebar_block {
 ul.delimited {
   @include delimited-list;
 
-  li:last-child {
-    &:before {
+  &.and {
+    li:last-child:before {
       content: 'and ';
     }
+  }
 
-    &:after {
+  &.comma {
+    li:last-child:after {
       content: ',';
     }
   }

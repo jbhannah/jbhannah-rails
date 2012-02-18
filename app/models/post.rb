@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
   end
 
   belongs_to :user
+  has_and_belongs_to_many :tags
   paginates_per 10
 
   scope :by_year, lambda { |year|

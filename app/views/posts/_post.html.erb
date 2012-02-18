@@ -1,6 +1,7 @@
 <%= content_tag_for :article, post do %>
   <header class="post_header">
     <h1><%= link_to_unless_current post.title, post %></h1>
+
     <div class="meta">
       Posted by <%= post.user.to_s.split.first %>
       <% if post.published_at %>
@@ -10,6 +11,15 @@
       <% end %>
       –
       <%= link_to "Permalink", post %>
+    </div>
+
+    <div class="tags">
+      Tags:
+      <ul class="delimited">
+      <% post.tags.each do |pt| %>
+        <li><%= pt %></li>
+      <% end %>
+      </ul>
     </div>
   </header>
 

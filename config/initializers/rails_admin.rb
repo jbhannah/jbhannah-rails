@@ -83,7 +83,7 @@ RailsAdmin.config do |config|
 
   config.model Post do
     edit do
-      fields :title, :user, :published
+      fields :title, :user, :published, :tags
       field :body do
         ckeditor true
       end
