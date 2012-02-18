@@ -6,7 +6,7 @@ atom_feed do |feed|
     feed.entry(post) do |entry|
       entry.title(post.title)
       entry.published(post.published_at)
-      entry.content(post.body, format: 'html')
+      entry.content(sanitize post.body, format: 'html')
 
       entry.author do |author|
         author.name(post.user.to_s)
