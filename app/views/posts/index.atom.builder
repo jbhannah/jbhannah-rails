@@ -1,10 +1,11 @@
 atom_feed do |feed|
   feed.title(Settings.name)
-  feed.updated(@posts.first.published_at)
+  feed.updated(@posts.first.published_at) if @posts.first
 
   @posts.each do |post|
     feed.entry(post) do |entry|
       entry.title(post.title)
+      entry.published(post.published_at)
       entry.content(post.body, format: 'html')
 
       entry.author do |author|
