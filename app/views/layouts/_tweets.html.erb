@@ -1,3 +1,4 @@
+<% cache "latest_tweets", expires_in: 60 do %>
 <div class="sidebar_block" id="latest_tweets">
   <h3><%= link_to "Tweets", Settings.social.twitter.url, rel: :external %></h3>
 
@@ -13,3 +14,4 @@
   <% end %>
   </ul>
 </div>
+<% end %>
