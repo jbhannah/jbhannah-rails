@@ -68,5 +68,8 @@ module Jbhannah
     config.assets.precompile += ['disqus.js']
     config.assets.precompile += [/welcome.(css|js)/, /posts.(css|js)/]
     config.assets.precompile += [/devise\/sessions.(css|js)/]
+
+    # Allowable sanitized HTML tags and attributes
+    config.action_view.sanitized_allowable_attributes = 'rel'
   end
 end
