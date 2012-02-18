@@ -1,3 +1,4 @@
+<% cache "post_#{post.id}" do %>
 <%= content_tag_for :article, post do %>
   <header class="post_header">
     <h1><%= link_to_unless_current post.title, post %></h1>
@@ -14,4 +15,5 @@
   </header>
 
   <%= sanitize post.body %>
+<% end %>
 <% end %>

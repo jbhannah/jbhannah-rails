@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   load_and_authorize_resource find_by: :slug
-  caches_action :index, :show
 
   def index
     if params[:year]

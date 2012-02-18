@@ -12,7 +12,6 @@ class PostSweeper < ActionController::Caching::Sweeper
   def expire_cache_for(post)
     expire_fragment "post_months" 
     expire_fragment "latest_posts" 
-    expire_action controller: :posts, action: :index
-    expire_action controller: :posts, action: :show, id: post.slug
+    expire_fragment "post_#{post.id}"
   end
 end
