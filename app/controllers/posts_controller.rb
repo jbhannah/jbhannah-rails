@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   load_and_authorize_resource find_by: :slug
+  caches_action :index, :show, layout: false, cache_path: lambda { |c| c.params }
 
   def index
     if params[:year]
