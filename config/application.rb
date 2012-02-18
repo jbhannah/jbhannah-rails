@@ -67,5 +67,6 @@ module Jbhannah
     # Precompile assets
     config.assets.precompile += ['disqus.js']
     config.assets.precompile += [/welcome.(css|js)/, /posts.(css|js)/]
+    config.assets.precompile += [/devise\/sessions.(css|js)/]
   end
 end
