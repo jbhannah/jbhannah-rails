@@ -12,6 +12,10 @@ module ApplicationHelper
   end
 
   def latest_tweets
-    Twitter.user_timeline(Settings.handle).first(5)
+    begin
+      Twitter.user_timeline(Settings.handle).first(5)
+    rescue
+      []
+    end
   end
 end

@@ -1,6 +1,7 @@
 <div class="sidebar_block" id="latest_tweets">
   <h3><%= link_to "Tweets", Settings.social.twitter.url, rel: :external %></h3>
 
+  <%= "Twitter could not be reached, or another error occurred." if latest_tweets.empty? %>
   <ul>
   <% latest_tweets.each do |tweet| %>
     <li class="tweet">
