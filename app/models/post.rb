@@ -33,6 +33,13 @@ class Post < ActiveRecord::Base
   before_validation :update_published_at, :set_slug
   validates_presence_of :title, :slug, :user_id, :body
 
+  auto_html_for :body do
+    image
+    youtube
+    vimeo
+    gist
+  end
+
   def to_param
     slug
   end
