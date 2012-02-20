@@ -19,6 +19,8 @@
   <%= javascript_include_tag params[:controller], :application %>
 
   <%= csrf_meta_tags %>
+
+  <%= render partial: 'layouts/google_analytics' if Rails.env.production? %>
 </head>
 <body class="<%= controller_name + ' ' + action_name %>">
 <div id="root">
@@ -64,8 +66,6 @@
   <%= link_to "Some Rights Reserved", "http://creativecommons.org/licenses/by-nc-sa/3.0/", rel: [:external, :license] %>.
   <%= link_to "Website code on GitHub", "https://github.com/jbhannah/jbhannah", rel: :external %>.
 </footer>
-
-<%= render partial: 'layouts/gauges' if Rails.env.production? %>
 </body>
 </html>
 <% end %>
