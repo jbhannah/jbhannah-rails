@@ -34,6 +34,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :title, :slug, :user_id, :body
 
   auto_html_for :body do
+    redcarpet
     image
     flickr(link_options: { rel: :external })
     twitter(align: :center)

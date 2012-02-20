@@ -85,7 +85,7 @@ RailsAdmin.config do |config|
     edit do
       fields :title, :user, :published, :tags
       field :body do
-        ckeditor true
+        html_attributes({ cols: 100, rows: 20 })
       end
     end
   end
