@@ -11,6 +11,7 @@ default_run_options[:pty] = true
 
 set :application, "jbhannah"
 set :repository,  "git://github.com/jbhannah/jbhannah.git"
+set :branch,      "production"
 
 set :scm, :git
 
