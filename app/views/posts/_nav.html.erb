@@ -1,4 +1,4 @@
 <nav class="posts_nav">
-  <div class="post_nav prev_post"><%= link_to "« " + @post.prev.title, @post.prev if @post.prev %></div>
-  <div class="post_nav next_post"><%= link_to @post.next.title + " »", @post.next if @post.next %></div>
+  <div class="post_nav prev_post"><%= link_to "« " + @post.prev.title, @post.prev if @post.prev %>&nbsp;</div>
+  <div class="post_nav next_post">&nbsp;<%= link_to @post.next.title + " »", @post.next if @post.next %></div>
 </nav>
