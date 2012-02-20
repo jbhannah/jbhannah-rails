@@ -10,29 +10,37 @@ body.posts {
     }
   }
 
-  nav.posts_nav {
-    @include column(18, true);
-
-    font-size: smaller;
-
-    div.post_nav {
-      @include column(9);
-
-      &.prev_post {
-        text-align: left;
-      }
-
-      &.next_post {
-        @include last;
-
-        text-align: right;
-      }
+  &.index {
+    article.post {
+      margin-bottom: 3em;
     }
   }
 
-  div#disqus_thread {
-    @include column(18, true);
+  &.show {
+    nav.posts_nav {
+      @include column(18, true);
 
-    margin-top: 1.5em;
+      font-size: smaller;
+
+      div.post_nav {
+        @include column(9);
+
+        &.prev_post {
+          text-align: left;
+        }
+
+        &.next_post {
+          @include last;
+
+          text-align: right;
+        }
+      }
+    }
+
+    div#disqus_thread {
+      @include column(18, true);
+
+      margin-top: 1.5em;
+    }
   }
 }
