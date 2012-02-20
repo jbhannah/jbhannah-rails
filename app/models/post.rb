@@ -36,6 +36,7 @@ class Post < ActiveRecord::Base
   auto_html_for :body do
     image
     flickr(link_options: { rel: :external })
+    twitter(align: :center)
     youtube
     vimeo
     gist

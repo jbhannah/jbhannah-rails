@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/jbhannah/auto_html.git
-  revision: 2ab89901a90481b0c3c18f58d1ca0dd90cf99cd9
+  revision: 6c52e3d111323e6e386e112d0a17b1d37988f7b6
   specs:
     auto_html (1.5.1)
       redcarpet (~> 2.0.0)
