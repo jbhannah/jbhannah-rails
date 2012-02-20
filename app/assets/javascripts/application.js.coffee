@@ -1,5 +1,8 @@
 //= require jquery_ujs
 
-$(() ->
-  $('a[rel~="external"]').attr target: '_blank'
-)
+$ () ->
+  $('a[rel~="external"]').each () ->
+    $(this).attr target: '_blank'
+
+    $(this).click () ->
+      _gaq.push ['_trackEvent', 'Outbound Links', $(this).href, $(this).text]
