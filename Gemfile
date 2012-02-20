@@ -27,7 +27,7 @@ end
 gem 'jquery-rails'
 
 gem 'twitter'
-gem 'auto_html'
+gem 'auto_html', git: 'git://github.com/jbhannah/auto_html.git'
 
 gem 'rails_admin', git: 'git://github.com/sferik/rails_admin.git'
 gem 'ckeditor', '~> 3.7.0.rc'
