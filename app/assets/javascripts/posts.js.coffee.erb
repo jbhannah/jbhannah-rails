@@ -1,3 +1,5 @@
 $(() ->
   $.getScript('<%= asset_path "disqus.js" %>')
+
+  $('article.post a[href^="http"]').attr rel: 'external'
 )
