@@ -102,3 +102,12 @@ The application can be started, stopped, and restarted with
 nginx can be reloaded with
 
     $ cap nginx:reload
+
+## Licensing
+
+The code published here is licensed under the [MIT
+License](https://github.com/jbhannah/jbhannah/blob/master/LICENSE). All
+images and text published at [jbhannah.net](http://jbhannah.net/) is
+licensed under a [Creative Commons BY-NC-SA
+3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/) license unless
+otherwise specified.
