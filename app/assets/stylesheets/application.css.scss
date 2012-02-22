@@ -113,6 +113,12 @@ div#latest_posts {
         font-size: 80%;
         margin-bottom: 1em;
       }
+
+      &:last-child {
+        div.meta {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
