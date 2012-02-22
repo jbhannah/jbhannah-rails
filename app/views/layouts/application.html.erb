@@ -3,12 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>
-    <% if content_for?(:title) %>
-      <%= yield :title %> –
-    <% end %>
-    <%= Settings.name %>
-  </title>
+  <title><%= yield(:title).split.join(' ') + " – " if content_for?(:title) %><%= Settings.name %></title>
 
   <%= favicon_link_tag asset_path("favicon.ico") %>
   <%= auto_discovery_link_tag :atom, { controller: :posts, action: :index, format: :atom } %>
