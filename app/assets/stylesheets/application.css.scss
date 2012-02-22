@@ -104,9 +104,14 @@ body {
 
 div#latest_posts {
   ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
     li.latest_post {
       div.meta {
         font-size: 80%;
+        margin-bottom: 1em;
       }
     }
   }
