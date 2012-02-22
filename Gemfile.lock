@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/jbhannah/auto_html.git
-  revision: b3b205f6cedf5802008646bfee784e3be4e4258a
+  revision: 06aa0b49884d2a97328ba340be687e54396875f8
   specs:
     auto_html (1.5.1)
       redcarpet (~> 2.0.0)
@@ -60,7 +60,7 @@ GEM
     bootstrap-sass (2.0.1)
     builder (3.0.0)
     cancan (1.6.7)
-    capistrano (2.11.1)
+    capistrano (2.11.2)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
@@ -106,7 +106,7 @@ GEM
     hike (1.2.1)
     hpricot (0.8.6)
     i18n (0.6.0)
-    journey (1.0.2)
+    journey (1.0.3)
     jquery-rails (2.0.0)
       railties (>= 3.2.0.beta, < 5.0)
       thor (~> 0.14)
@@ -130,7 +130,7 @@ GEM
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     orm_adapter (0.0.6)
-    pg (0.13.1)
+    pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.1)
