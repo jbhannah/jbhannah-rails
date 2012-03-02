@@ -47,8 +47,7 @@ namespace :nginx do
 end
 
 after 'deploy:setup', 'deploy:chown'
+after 'deploy:setup', 'nginx:symlink'
 
-after 'deploy:start', 'nginx:symlink'
-after 'deploy:restart', 'nginx:symlink'
-
-after 'nginx:symlink', 'nginx:reload'
+after 'deploy:start', 'nginx:reload'
+after 'deploy:restart', 'nginx:reload'
