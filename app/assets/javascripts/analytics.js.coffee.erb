@@ -1,0 +1,17 @@
+$ () ->
+  ga = (if 'https:' == document.location.protocol then 'https://ssl' else 'http://www') + '.google-analytics.com/ga.js'
+
+  $.getScript ga, () ->
+    _gaq.push ['_setAccount', 'UA-29322890-1']
+    <% if Rails.env.production? %>
+    _gaq.push ['_trackPageview']
+    <% end %>
+
+  $('a[rel~="external"]').each () ->
+    $(this).attr target: '_blank'
+
+    $(this).click () ->
+      ary = ['_trackEvent', 'Outbound Links', this.href, this.text]
+      <% if Rails.env.production? %>
+      _gaq.push ary
+      <% end %>
