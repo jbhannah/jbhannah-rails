@@ -8,13 +8,14 @@ RailsAdmin.config do |config|
   # I18n.default_locale = :de
 
   config.current_user_method { current_user } # auto-generated
-  
+  config.authorize_with :cancan
+
   # If you want to track changes on your models:
   # config.audit_with :history, User
-  
+
   # Or with a PaperTrail: (you need to install it first)
   # config.audit_with :paper_trail, User
-  
+
   # Set the admin name here (optional second array element will appear in a beautiful RailsAdmin red ©)
   config.main_app_name = ['jbhannah', 'Admin']
   # or for a dynamic name:
@@ -79,14 +80,18 @@ RailsAdmin.config do |config|
 
   # All fields marked as 'hidden' won't be shown anywhere in the rails_admin unless you mark them as visible. (visible(true))
 
-  config.authorize_with :cancan
-
   config.model Post do
     edit do
       fields :title, :user, :published, :tags
       field :body do
         html_attributes({ cols: 100, rows: 20 })
       end
+    end
+  end
+
+  config.model Tag do
+    edit do
+      field :name
     end
   end
 end
