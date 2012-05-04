@@ -1,8 +1,8 @@
 require "bundler/capistrano"
 require "auto_html/capistrano"
 
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
+set :rvm_type, :system
 set :rvm_ruby_string, '1.9.3@jbhannah'
 
 set :user, "jbhannah"
